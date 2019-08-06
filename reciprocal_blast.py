@@ -21,7 +21,7 @@ files = os.listdir(db_directory)
 dbs = sorted(set([i.split(".", 1)[0] for i in files]))
 fail = 0
 for db in dbs:
-    subprocess.run("blastp -query " + seq_file + " -db " + db_directory + "/"  + db + " -out " + output_directory + "/" + seq_name + "_vs_" + db + " -outfmt 6 -evalue 1e-09 -num_alignments 1", shell = True)
+    subprocess.run("blastp -query " + seq_file + " -db " + db_directory + "/"  + db + " -out " + output_directory + "/" + seq_name + "_vs_" + db + " -outfmt 6 -evalue 1e-09 -num_alignments 1 -max_hsps 1", shell = True)
     lines = get_file_data(output_directory + "/" + seq_name + "_vs_" + db)
     for line in lines:
         hit = line.split("\t")[1]
