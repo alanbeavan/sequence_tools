@@ -22,7 +22,7 @@ for line in lines:
     else:
         to_add = re.sub("-", "", line)
         seq = seq + to_add
-
+newlines.append(seq)
 f = open(sys.argv[2], "w")
 f.write("\n".join(newlines))
 f.close()
