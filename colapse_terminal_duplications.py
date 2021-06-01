@@ -1,5 +1,12 @@
 #!/usr/bin/env python3.6
+<<<<<<< HEAD
 """Remove one of a pair of inparalogs from a gene tree."""
+=======
+"""Remove one of a pair of inparalogs from a gene tree.
+
+
+This is written for orhtofinder output. Modify it for your trees."""
+>>>>>>> 5162cc53285f7ef2eb8773773dd7ec60de187924
 
 import ete3
 import re
